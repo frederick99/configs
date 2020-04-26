@@ -2,8 +2,9 @@
 # ignore everything
 /*
 
-# include .gitignore
+# include .gitignore and README.md
 !.gitignore
+!README.md
 
 # include individual config files
 !.gitconfig
