@@ -1,0 +1,21 @@
+
+# ignore everything
+/*
+
+# include .gitignore
+!.gitignore
+
+# include individual config files
+!.gitconfig
+!.tmux.conf
+!.vimrc
+!.zshrc
+
+# include config directory
+!.config/
+.config/*
+
+# include neofetch and nvim config dirs
+!.config/neofetch/
+!.config/nvim/
+

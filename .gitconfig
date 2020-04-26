@@ -1,0 +1,7 @@
+[http]
+	proxy = 
+[user]
+	name = Naveen
+	email = fredericktrotteville99@gmail.com
+[color]
+	ui = auto
