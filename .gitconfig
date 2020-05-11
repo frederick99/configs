@@ -5,3 +5,5 @@
 	email = fredericktrotteville99@gmail.com
 [color]
 	ui = auto
+[core]
+	editor = vim

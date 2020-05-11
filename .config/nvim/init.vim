@@ -57,14 +57,7 @@ endif
 " Turn on italics
 let g:material_terminal_italics = 1
 
-" Turn on Vim hardtime by default
-let g:hardtime_default_on = 1
-
 " Look in the root dir by default
 let g:Lf_WorkingDirectoryMode = 'Ac'
 let g:Lf_CommandMap = {'<C-T>': ['<CR>']}
 let g:Lf_WindowPosition = 'popup'
-
-" Set pythonx version
-set pyxversion=3
-
