@@ -52,6 +52,7 @@ set linebreak   " break wrapped lines at word boundaries
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set splitright
 
 set ignorecase
 set smartcase
@@ -59,9 +60,17 @@ set smartcase
 set incsearch
 set hlsearch
 
+set nobackup
+set noswapfile
+
 " Remap : to ;
 nnoremap ; :
 nnoremap Q :wq<CR>
+
+" nnoremap i k
+" nnoremap j h
+" nnoremap k j
+" nnoremap h i
 
 " Using tab pages
 nnoremap <silent> <C-H> :tabprevious<CR>
@@ -81,8 +90,9 @@ nnoremap <DOWN>  :resize -1<CR>
 colorscheme fahrenheit
 
 let g:airline_theme = 'fahrenheit'
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 
+let g:lsp_diagnostics_echo_cursor = 1
 
 
 if (has('termguicolors'))
@@ -93,3 +103,17 @@ endif
 set ttimeout
 set timeoutlen=1000   " from visual mode
 set ttimeoutlen=0     " from insert mode
+
+
+"Mode Settings
+let &t_SI.="\e[5 q" "SI = INSERT mode
+let &t_SR.="\e[4 q" "SR = REPLACE mode
+let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+
+"Cursor settings:
+"  1 -> blinking block (0 -> default)
+"  2 -> solid block
+"  3 -> blinking underscore
+"  4 -> solid underscore
+"  5 -> blinking vertical bar
+"  6 -> solid vertical bar

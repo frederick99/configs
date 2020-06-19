@@ -55,7 +55,7 @@ ZSH_THEME="gallois" # gallois agnoster
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -124,18 +124,16 @@ setopt CORRECT_ALL
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$HOME/.local/bin:$PATH"
 
+# Deno
+export DENO_INSTALL="/home/naveen/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 # hash -d 田=/mnt/c/Users/Naveen
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -161,6 +159,8 @@ alias youtube-dl-audio='youtube-dl --ignore-errors --output "%(title)s.%(ext)s" 
 
 alias reload='source ~/.zshrc'
 alias subl='/mnt/c/Applications/Sublime\ Text\ 3/subl.exe'
+
+mkc() { mkdir $1 && cd $1; }
 
 # global alias
 # alias -g sudo_npm = "/usr/local/lib/nodejs/node-v12.15.0-linux-x64/bin/node /usr/local/lib/nodejs/node-v12.15.0-linux-x64/bin/npm"
